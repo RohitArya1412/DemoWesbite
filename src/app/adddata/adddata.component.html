@@ -1,0 +1,8 @@
+<p>adddata works!</p>
+<form action="" [formGroup]="add">
+    <input type="text" name="data" formControlName="data">
+    <button [disabled]="add.invalid" (click)="addData()">Add</button>
+</form>
+<hr>
+
+<app-inputdata></app-inputdata>

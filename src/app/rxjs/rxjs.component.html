@@ -1,0 +1,65 @@
+<div class="px-5 mt-2">
+    <table class="table align-middle table-hover mb-0 bg-white">
+        <thead class="bg-body-secondary">
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Button</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of arr let i = index">
+            <tr>
+                <td>
+                    {{i+1}}
+                </td>
+                <td>
+                    <img src="{{item.img}}" alt="" style="width: 50px; height: 50px" class="rounded-circle" />
+                </td>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.price}}
+                </td>
+                <td>
+                    <button mat-stroked-button color="warn">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h3 class="mt-4">Hiii This is <strong class="text-danger-emphasis">{{username}}</strong></h3>
+
+<div class="row mt-2">
+    <div class="col-md-3">
+        <app-comp2></app-comp2>
+    </div>
+    <div class="col-md-3">
+        <app-comp3></app-comp3>
+    </div>
+    <div class="col-md-3">
+        <app-comp4></app-comp4>
+    </div>
+    <div class="col-md-3">
+        <app-comp5></app-comp5>
+    </div>
+
+</div>
+<div class="row mt-2">
+    <div class="col">
+        <app-replaysubject></app-replaysubject>
+    </div>
+</div>
+<div class="row">
+    <!-- <div class="col-md-6">
+        <app-dropdown></app-dropdown>
+    </div> -->
+    <div class="col-md-12">
+        <app-dropdown1></app-dropdown1>
+    </div>
+</div>
+<br><br><br><br><br>

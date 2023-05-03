@@ -1,0 +1,9 @@
+<h2>Child component</h2>
+<h4>@input <strong>{{onChange}}</strong></h4>
+<br>
+<ng-content></ng-content>
+<h2>without ngContent::{{show}}</h2>
+
+<input type="text" #val placeholder="enter the value">
+
+<button (click)="sendData(val)">Send</button>

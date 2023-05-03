@@ -1,0 +1,50 @@
+<div>
+    <app-comp1></app-comp1>
+</div>
+
+<div class=" float-end mt-3 me-3">
+    <button mat-raised-button color="accent" matBadge="{{totalLength}}" matBadgePosition="after"
+        data-toggle="modal">Table
+        Data</button>
+</div>
+
+<div class="">
+
+    <div class="mat-elevation-z8 mt-5 w-75 m-auto">
+        <mat-form-field class="w-100" style="height: 90;">
+            <mat-label>Search</mat-label>
+            <input matInput matInput (keyup)="applyFilter($event)" class="input" placeholder="Enter name">
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="id">Id</th>
+                <td mat-cell *matCellDef="let studenData"> {{studenData.id}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="name"> Name </th>
+                <td mat-cell *matCellDef="let studenData"> {{studenData.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="email"> Email </th>
+                <td mat-cell *matCellDef="let studenData"> {{studenData.email}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="gender">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="gender">Gender </th>
+                <td mat-cell *matCellDef="let studenData"> {{studenData.gender}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

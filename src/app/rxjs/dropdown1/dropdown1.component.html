@@ -1,0 +1,46 @@
+<!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of cars">{{item}}</li>
+</ul> -->
+
+<!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+
+    <mat-tree-node [ngStyle]="{'background-color':node.color}" *matTreeNodeDef="let node;let i = index"
+        matTreeNodeToggle>
+        {{node.name}}
+    </mat-tree-node>
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild;">
+        <div class="mat-tree-node">
+            <button (click)="showValue(node.name,node)" mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'Toggle ' + node.name">
+                <mat-icon class="mat-icon-rtl-mirror">
+                    {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                </mat-icon>
+            </button>
+            <span>{{node.name}}</span>
+
+        </div>
+
+        <div [class.example-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+            <div class="nodeClr" matTreeNodeOutlet></div>
+        </div>
+    </mat-nested-tree-node>
+</mat-tree> -->
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+        <!-- use a disabled button to provide padding for tree leaf -->
+        <button mat-icon-button disabled></button>
+        <span  [ngStyle]="{'color': color.colors} " >{{node.name}}</span>
+        <!-- <span   [ngStyle]="(showRed==true ? {'color': 'red'} : {} ||  showBlue==true? {'color': 'blue'} : {})" >{{node.name}}</span> -->
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+        <button (click)="showValue(node.name,node)" mat-icon-button matTreeNodeToggle
+            [attr.aria-label]="'Toggle' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+        </button>
+        {{node.name}}
+    </mat-tree-node>
+</mat-tree>

@@ -1,0 +1,8 @@
+<p>inputdata works!</p>
+
+<div *ngFor="let a of vldata let i=index">
+    <ul class="list-group">
+        <li class="list-group-item">{{a.data}} <span><button value="{{i}}"
+                    (click)="delData($event)">Remove</button></span></li>
+    </ul>
+</div>

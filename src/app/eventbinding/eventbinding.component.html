@@ -1,0 +1,15 @@
+<select (change)="chngefun($event)">
+    <option selected disabled>None</option>
+    <option value="red" >Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">yellow</option>
+    <option value="aquamarine">Auamarine</option>
+    <option value="grey">Grey</option>
+    <option value="aqua">Aqua</option>
+    <option value="lightblue">Lightblue</option>
+    <option value="lawngreen">Lawngreen</option>
+    <option value="reset">Reset</option>
+</select>
+<br>
+<span [style.color]="color" [style.backgroundColor]="bgColor">Your Selected value :{{selected}}</span>

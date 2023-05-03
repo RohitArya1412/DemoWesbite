@@ -1,0 +1,72 @@
+<h2>Two Data Binding</h2>
+<div class="container">
+
+    <div class="row">
+        <div class="col-5">
+            <div class="mb-3 ">
+                <label for="firstNumber" class="form-label">First Number</label>
+                <input type="number" class="form-control" id="firstNumber">
+            </div>
+            <div class="mb-3">
+                <label for="secondNumber" class="form-label">Second Number</label>
+                <input type="number" class="form-control" id="secondNumber">
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3 ">
+                <div class="form-control">
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Calculator" id="add" value="+"
+                            (click)="calculatorFunction($event)">
+                        <label class="form-check-label" for="add">
+                            Add
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Calculator" id="substract" value="-"
+                            (click)="calculatorFunction($event)">
+                        <label class="form-check-label" for="substract">
+                            Substract
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Calculator" id="multiply" value="*"
+                            (click)="calculatorFunction($event)">
+                        <label class="form-check-label" for="multiply">
+                            Multiply
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Calculator" id="divide" value="/"
+                            (click)="calculatorFunction($event)">
+                        <label class="form-check-label" for="divide">
+                            Divide
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+
+        <div class="mb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <p>First=><span>{{firstNumber}}</span></p>
+                    </div>
+                    <div class="col-4">
+                        <p>Second=><span>{{secondNumber}}</span></p>
+                    </div><br>
+                    <div class="col-4">
+                        <p>Total=><span>{{total}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

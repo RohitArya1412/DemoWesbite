@@ -1,0 +1,200 @@
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add Student Data </h4>
+                <button type="button" class="btn btn-outline-danger  bi-x-circle" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="mt-2 d-flex flex-column align-items-center ">
+                    <form [formGroup]="student"
+                        class="form-controlalign-content-center shadow rounded p-4  shadow rounded">
+                        <div class="form-group p-2">
+                            <label for="name" class="float-start">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                                formControlName="name">
+                            <div *ngIf="!name?.valid && (name?.dirty ||name?.touched)">
+                                <div [hidden]="!name.errors.required" class="text-danger" class="text-danger">
+                                    First Name is required
+                                </div>
+                                <!-- <div [hidden]="!name.errors.minlength">
+                                    Min Length is 10
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="form-group p-2">
+                            <label for="email" class="float-start">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Example@gmail.com" formControlName="email">
+                            <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
+                                <div [hidden]="!email.errors.required" class="text-danger" class="text-danger">
+                                    Email is required
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group m-1 p-2">
+                            <input type="radio" value="male" class="form-check-input" id="gender" name="gender"
+                                formControlName="gender">
+                            Male
+                            <input type="radio" value="female" class="form-check-input" id="gender" name="gender"
+                                formControlName="gender">
+                            Female
+                            <div *ngIf="!gender.valid && (gender.dirty ||gender.touched)" class="text-danger">
+                                <div [hidden]="!gender.errors.required">
+                                    gender is required
+                                </div>
+                            </div>
+                        </div>
+                        <div formGroupName="address">
+                            <div class="form-group">
+                                <label for="city" class="float-start">City</label>
+                                <input type="text" class="form-control" name="city" formControlName="city">
+                                <div *ngIf="!city.valid && (city.dirty ||city.touched)" class="text-danger">
+                                    <div [hidden]="!city.errors.required">
+                                        city is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="street" class="float-start">Street</label>
+                                <input type="text" class="form-control" name="street" formControlName="street">
+                                <div *ngIf="!street.valid && (street.dirty ||street.touched)" class="text-danger">
+                                    <div [hidden]="!street.errors.required">
+                                        street is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pincode" class="float-start">Pin Code</label>
+                                <input type="text" class="form-control" name="pincode" formControlName="pincode">
+                                <div *ngIf="!pincode.valid && (pincode.dirty ||pincode.touched)" class="text-danger">
+                                    <div [hidden]="!pincode.errors.required">
+                                        pincode is required
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="country" class="float-start">State </label>
+                                <select id="country" name="state" class="form-select " formControlName="state">
+                                    <option value="" selected disabled>Select</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Jaipur">Jaipur</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group p-2 ">
+                            <label for="password" class="float-start">Password</label>
+
+                            <div class="input-group mb-3">
+
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fs-5 bg-dark-subtle text-danger"
+                                        (click)="onClick()"><i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                        <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i></span>
+                                </div>
+                                <input [type]="password" class="form-control" id="password" placeholder="Enter Password"
+                                    formControlName="password">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group p-2">
+                            <label for="confirmPassword" class="float-start">Confirm Password</label>
+
+                            <input type="password" class="form-control" id="confirmPassword"
+                                placeholder="Enter ConfirmPassword" formControlName="confirmPassword">
+                            <small
+                                *ngIf="student.get('password').value!==student.get('confirmPassword').value&&passwordMatch"><b>*</b>Password
+                                Does not match</small>
+                        </div>
+                        <button type="submit" [disabled]="!student.valid" *ngIf="saveBtn" (click)="saveData()"
+                            class="btn btn-outline-success">Submit</button>
+                        <button class="btn btn-outline-success" *ngIf="updateBtn" [value]="editVal"
+                            (click)="updateVal($event)">Update</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <a href="" class="btn btn-success mt-1 btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Show
+        Form</a>
+</div>
+<div class="w-25 float-end">
+    <button class="btn btn-success" matBadge="{{totalLength}}" matBadgePosition="after" data-toggle="modal">Table
+        Data</button>
+</div>
+
+<div class=" w-75">
+    <div class="mb-1 ms-3 ">
+        <label for="find" class="form-label float-start me-2 mt-1">Search Box</label>
+        <input type="text" class="form-control w-25" id="find" placeholder="Search" [(ngModel)]="searchData">
+    </div>
+</div>
+
+<div class="alert alert-primary w-25 float-end" role="alert" *ngIf="isVisible">
+    <b>Delete Data</b>
+</div>
+<marquee [ngStyle]="{color:color}" [style.fontSize.px]="fontSize">{{marqName}}</marquee>
+<div *ngIf="showLoading">
+    <b class="text-danger fs-2 mb-2">Loading....</b>
+</div>
+<div class="spinner-border text-danger" style="width: 100px;height: 100px;" role="status" *ngIf="showSpiner">
+    <span class="sr-only"></span>
+</div>
+<ng-container
+    *ngIf="( studentData | mooksearch : searchData  | paginate:{itemsPerPage:pageItem,currentPage:page}) as result ">
+    <div class="table-responsive mt-2">
+        <table class="table table-striped table-hover " cellpadding="0" cellspacing="0">
+            <thead class="bg-success-subtle text-danger">
+                <tr>
+                    <th>Id</th>
+                    <th>Name <i (click)="onSortClick($event)" class="my-icon fa fa-chevron-up"></i></th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Pin Code</th>
+                    <th>Street</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr *ngFor="let item of result">
+                    <td>{{item.id}}</td>
+                    <td (click)="marquee(item.name)">{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.gender}}</td>
+                    <td>{{item.address.
+                        city}}</td>
+                    <td>{{item.address.pincode}}</td>
+                    <td>{{item.address.street}}</td>
+                    <td><button class="btn btn-outline-warning me-1 material-icons" data-toggle="modal"
+                            data-target="#modalLoginForm" (click)="editData(item)"
+                            matTooltip="{{item.name}}">edit</button>
+                        <button class="btn btn-outline-danger material-icons" (click)="deleteData(item.id)"
+                            matTooltip="Delete">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p *ngIf="result.length === 0" class="fs-4"><i class="bi  bi-emoji-frown text-warning fs-3"></i>
+            No Result Found</p>
+        <pagination-controls class="w-25" previousLabel="Prev" class="float-end" nextLabel="Next"
+            (pageChange)="page=$event">
+        </pagination-controls>
+        <select name="" id="" class="form-select select ms-2" (change)="chngePge($event)">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+</ng-container>

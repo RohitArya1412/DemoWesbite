@@ -1,0 +1,23 @@
+input.ng-invalid.ng-touched {
+  border: 2px solid #e42323;
+  box-shadow: 0px 0px 5px inset rgb(227, 91, 91);
+}
+
+input {
+  cursor: pointer;
+}
+form.ng-invalid {
+  border: 2px solid #e42323;
+  box-shadow: 0px 0px 10px rgb(227, 91, 91) !important;
+}
+form.ng-valid {
+  border: 2px solid #2ddb33;
+  box-shadow: 0px 0px 10px rgb(93, 220, 103) !important;
+}
+select.ng-invalid.ng-touched {
+  border: 2px solid #e42323;
+  box-shadow: 0px 0px 5px inset rgb(227, 91, 91);
+}
+.select{
+  width: 100px;
+}

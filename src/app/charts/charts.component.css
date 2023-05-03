@@ -1,0 +1,32 @@
+#divChart {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart1 {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart2 {
+  display: block;
+  width: 400px;
+  height: 400px;
+  /* color: rgb(78, 57, 10); */
+}
+#divChart3,
+#divChart4 {
+  display: block;
+  width: 400px;
+  height: 400px;
+  /* color: rgb(78, 57, 10); */
+}
+.modal-notify .modal-header {
+  border-radius: 3px 3px 0 0;
+}
+.modal-notify .modal-content {
+  border-radius: 3px;
+}
+.select {
+  width: 80px;
+}

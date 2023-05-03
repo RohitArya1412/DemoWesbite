@@ -1,0 +1,50 @@
+
+<div class="d-flex flex-column align-items-center ">
+    <h1 class="bg-danger-subtle text-primary-emphasis m-2">Todo List With Template Driven Form</h1>
+    <form action="" #contact="ngForm" (ngSubmit)="save(contact)"
+        class="form-control w-25 align-item-center shadow rounded mt-3">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" value="{{name1}}" name="name" id="name" #name="ngModel"
+                [(ngModel)]="model.name" ngModel required>
+            <small *ngIf="name.invalid&&name.touched" class="text-danger"><b>*</b>Required</small>
+        </div>
+        <div class="mb-3">
+            <label for="complain" class="form-label">Text</label>
+            <textarea type="email" class="form-control" id="complain" value="{{complain1}}" name="complain" rows="3"
+                ngModel #complain="ngModel" [(ngModel)]="model.complain" required></textarea>
+            <small *ngIf="complain.invalid&&complain.touched" class="text-danger"><b>*</b>Required</small>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-outline-success" *ngIf="showBtn1" [disabled]="!contact.valid">Submit</button>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-outline-success" *ngIf="showBtn" [value]="bindex"
+                (click)="update($event)">Update</button>
+        </div>
+    </form>
+    <table class="table table-success table-striped mt-3" *ngIf="show">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Text</th>
+                <th scope="col">Delete/Edit</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let val of arr let j=index">
+            <tr>
+                <th scope="row">{{j+1}}</th>
+                <td>{{val.name}}</td>
+                <td>{{val.complain}}</td>
+                <td><button class="btn btn-outline-danger me-2" value="{{j}}"
+                        (click)="delFun($event)">Delete</button><button class="btn btn-outline-dark" value="{{j}}"
+                        (click)="editFun($event)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br><br><br><br><br>
+
+<button class="btn btn-outline-danger" (click)="back()">Back</button>

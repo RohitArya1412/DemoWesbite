@@ -1,0 +1,51 @@
+<div class="my-3">
+    <br>
+    <div class="row">
+        <div class="col">
+            <h3>Add Video</h3>
+        </div>
+        <div class="col">
+            <button class="btn btn-warning float-end me-5" (click)="showInput()">Toggle</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-md-4" *ngIf="showfield">
+            <input type="text" class="form-control" #temp>
+            <button class="btn btn-success mt-2" (click)="addVideo(temp.value)">Add Video</button>
+        </div>
+    </div>
+    <hr>
+
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+        <strong>User1</strong>
+        <hr>
+        <ul>
+            <li *ngFor="let item of userlist1">Video: <strong>{{item}}</strong></li>
+
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <strong>User2</strong>
+        <hr>
+        <ul>
+            <li *ngFor="let item of userlist2">Video: <strong>{{item}}</strong></li>
+
+        </ul>
+        <button class="btn btn-success" [ngClass]="subscribe2?'btn-danger':'btn-success'"
+            (click)="user2Subscribe()">{{subscribe2?'UnSubscribe':'Subscribe'}}</button>
+    </div>
+    <div class="col-md-4">
+        <strong>User3</strong>
+        <hr>
+        <ul>
+            <li *ngFor="let item of userlist3">Video: <strong>{{item}}</strong></li>
+        </ul>
+        <button class="btn btn-success" [ngClass]="subscribe3?'btn-danger':'btn-success'"
+            (click)="user3Subscribe()">{{subscribe3?'UnSubscribe':'Subscribe'}}</button>
+    </div>
+</div>
+<br><br><br><br>

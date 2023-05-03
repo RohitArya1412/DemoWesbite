@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <h2>Directive works!</h2>
+        <div class="">
+            <h1 [style.color]="clr">Component </h1>
+            <button class="btn btn-danger" (click)="btnClick()">Click</button>
+        </div>
+        <div class="mb-3">
+            <h1>Structural directive</h1>
+            <button (click)="checkfun()" class="btn btn-primary">Toggle</button>
+            <p *ngIf="check">Hello this is "John Doe"</p>
+            
+        </div>
+        <div class="mb-3">
+            <h2 [ngStyle]="{'color':'red','font-weight':'bold'}">Attribute directive</h2>
+        </div>
+        <div class="w-25 mt-5 mb-5">
+            <select class="form-select bg-info-subtle" (change)="bankName($event)">
+                <option value="" selected disabled>Option</option>
+                <option [value]="name.name" *ngFor="let name of payment let i=index">{{name.name}}</option>
+            </select>
+        </div>
+        <div *ngIf="show2">
+            <select name="" id="" class="form-select bg-info-subtle" (change)="pName($event)">
+                <option value="" selected disabled>Option</option>
+                <option [value]="method" *ngFor="let method of paymentMethod">{{method}}</option>
+            </select>
+        </div>
+        <br>
+        <div class="w-25 mt-5 mb-5">
+            <select class=" form-select bg-info-subtle " (change)="chngeFun($event)">
+                <option value="" class="form-select bg-body-emphasis" selected disabled>Detail</option>
+                <option class="form-select bg-body-emphasis text-dark" [value]="car.name"
+                    *ngFor="let car of cars let i=index">
+                    {{car.name}}</option>
+            </select>
+        </div>
+        <div class="mb-3 m-3" *ngIf="show">
+            <div class="card border-secondary" style="width: 18rem;">
+                <img src="{{img}}" class="card-img-top" alt="...">
+                <div class="card-body bg-dark-subtle ">
+                    <h5 class="card-title text-dark">{{md}}</h5>
+                    <p class="card-text text-info-emphasis">{{about}}</p>
+                    <p class="card-text text-info-emphasis" *ngIf="dCheck">{{details}}</p>
+                    <button (click)="detailFun($event)" [ngClass]="{btnName}" class="btn btn-light">{{ btnName
+                        ? 'Read Less':'Read More'}}</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

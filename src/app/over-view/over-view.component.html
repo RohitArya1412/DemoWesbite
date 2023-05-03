@@ -1,0 +1,18 @@
+<h1>Nested Routes</h1>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-3">
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" routerLink="directive">Directive</a>
+                <a class="list-group-item list-group-item-action" routerLink="propertybinding">Property Binding</a>
+                <a class="list-group-item list-group-item-action" routerLink="eventbinding">Event Binding</a>
+                <a class="list-group-item list-group-item-action" routerLink="interpolation">interpolation</a>
+                <a class="list-group-item list-group-item-action" routerLinkActive routerLink="twowaybinding">Two way
+                    binding</a>
+            </div>
+        </div>
+        <div class="col-9 ">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

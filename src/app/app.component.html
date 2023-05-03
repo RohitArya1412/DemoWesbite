@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-body-secondary " aria-label="breadcrumb">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/homePage">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/overview">OverView</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/matcomp">Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/mook">Student</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/chart">Charts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/admin">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/rxjs">RxJS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/deactive">Deactivate</a>
+          </li>
+          <li class="nav-item">
+
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" routerLink="/overview"
+                aria-expanded="false">
+                Angular practice
+              </a>
+              <ul class="dropdown-menu" routerLinkActive="active">
+                <li>
+                  <a class="dropdown-item" routerLink="/hooks">Life Cycle Hooks</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/stores">Stores</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/empolyee">Empolyee</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="/directive">Directive</a></li>
+                <li><a class="dropdown-item" routerLink="/eventbinding">Event Binding</a></li>
+                <li><a class="dropdown-item" routerLink="/propertybinding">Property Binding</a></li>
+                <li><a class="dropdown-item" routerLink="/interpolation">Interpolation</a></li>
+                <li><a class="dropdown-item" routerLink="/twowaybinding">Two Way Binding</a></li>
+                <li><a class="dropdown-item" routerLink="/forms">Angular Forms</a></li>
+              </ul>
+            </div>
+          </li>
+          
+          <!-- <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/templateForm">templateForm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/reactiveForm">ReactiveForm</a>
+        </li> -->
+        </ul>
+        <strong class="text-danger" *ngIf="rxjs">Rxjs Component</strong>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div style="text-align: center;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

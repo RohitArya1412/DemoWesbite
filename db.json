@@ -1,0 +1,659 @@
+{
+  "student": [
+    {
+      "name": "shivam",
+      "email": "john@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 1
+    },
+    {
+      "name": "sjkndjks",
+      "email": "nsdsdjks",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 2
+    },
+    {
+      "name": "sdsd",
+      "email": "dsds@gamil.com",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "789456",
+        "state": "Mumbai"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 3
+    },
+    {
+      "name": "john doe",
+      "email": "john2@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "pune",
+        "street": "pune",
+        "pincode": "456223",
+        "state": "Mumbai"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 4
+    },
+    {
+      "name": "sohan",
+      "email": "sohan@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "789456",
+        "state": "Jaipur"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 5
+    },
+    {
+      "name": "sam",
+      "email": "sam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 15
+    },
+    {
+      "name": "jack",
+      "email": "jack@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 16
+    },
+    {
+      "name": "john",
+      "email": "john@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 17
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 18
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 19
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 20
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 21
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 22
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 23
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 24
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 25
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 26
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 27
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 28
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 29
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 30
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 31
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 32
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 33
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 34
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 35
+    },
+    {
+      "name": "shivam rai",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 36
+    },
+    {
+      "name": "shivam rai",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 37
+    },
+    {
+      "name": "jhony doee",
+      "email": "john@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "Uttar pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 38
+    },
+    {
+      "name": " shivam rai",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "delhi"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 39
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "gorakhpur",
+        "pincode": "123455",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 40
+    },
+    {
+      "name": "mary",
+      "email": "marry@gmail.com",
+      "gender": "female",
+      "address": {
+        "city": "Jaipur",
+        "street": "Jaipur",
+        "pincode": "302021",
+        "state": "Jaipur"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 41
+    },
+    {
+      "name": "shiv",
+      "email": "shiv@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273405",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 42
+    },
+    {
+      "name": "sjkndjks",
+      "email": "dsds@gamil.com",
+      "gender": "female",
+      "address": {
+        "city": "lucknow",
+        "street": "gorakhpur",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 43
+    },
+    {
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "gorakhpur",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "456123",
+      "confirmPassword": "456123",
+      "id": 44
+    },
+    {
+      "name": "shivam",
+      "email": "john@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "gorakhpur",
+        "street": "barhalganj",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 45
+    },
+    {
+      "name": "sjkndjks",
+      "email": "nsdsdjks",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "273402",
+        "state": "Uttar Pradesh"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 46
+    },
+    {
+      "name": "sdsd",
+      "email": "dsds@gamil.com",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "789456",
+        "state": "Mumbai"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 47
+    },
+    {
+      "name": "john doe",
+      "email": "john2@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "pune",
+        "street": "pune",
+        "pincode": "456223",
+        "state": "Mumbai"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 48
+    },
+    {
+      "name": "sohan",
+      "email": "sohan@gmail.com",
+      "gender": "male",
+      "address": {
+        "city": "lucknow",
+        "street": "lucknow",
+        "pincode": "789456",
+        "state": "Jaipur"
+      },
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 49
+    }
+  ],
+  "sales": [
+    {
+      "year": 2023,
+      "amount": 9000,
+      "colorcode": "#7f1d9a",
+      "id": 5
+    },
+    {
+      "year": 2010,
+      "amount": 6800,
+      "colorcode": "rgb(17, 165, 219)",
+      "id": 6
+    },
+    {
+      "year": 2006,
+      "amount": 8000,
+      "colorcode": "#c3db0a",
+      "id": 7
+    },
+    {
+      "year": 2000,
+      "amount": 7800,
+      "colorcode": "rgb(37, 86, 193)",
+      "id": 8
+    },
+    {
+      "year": 2015,
+      "amount": 3400,
+      "colorcode": "rgb(212, 81, 25",
+      "id": 9
+    },
+    {
+      "year": 2018,
+      "amount": 3700,
+      "colorcode": "rgb(167, 211, 8)",
+      "id": 10
+    },
+    {
+      "year": 2014,
+      "amount": 15000,
+      "colorcode": "chocolate",
+      "id": 11
+    },
+    {
+      "year": 2004,
+      "amount": 4561,
+      "colorcode": "#da0b0b",
+      "id": 12
+    },
+    {
+      "year": 2005,
+      "amount": 15000,
+      "colorcode": "#1b885e",
+      "id": 13
+    },
+    {
+      "year": 2019,
+      "amount": 6500,
+      "colorcode": "#b91d3c",
+      "id": 15
+    },
+    {
+      "year": 1999,
+      "amount": 18000,
+      "colorcode": "#810927",
+      "id": 16
+    },
+    {
+      "year": 2004,
+      "amount": 4561,
+      "colorcode": "#c44f4f",
+      "id": 17
+    }
+  ],
+  "Accounts": [
+    {
+      "name": "Bank",
+      "color": "red",
+      "children": [{ "name": "SBI" }, { "name": "RBI" }, { "name": "BOI" }]
+    },
+    {
+      "name": "Online Payment",
+      "color": "red",
+      "children": [
+        {
+          "name": "Mobile Payment",
+          "children": [{ "name": "Phone Pay" }, { "name": "Paytm" }]
+        },
+        {
+          "name": "Card Payment",
+          "children": [{ "name": "Credit Card" }, { "name": "Debit Card" }]
+        }
+      ]
+    }
+  ]
+}

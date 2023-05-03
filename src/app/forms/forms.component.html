@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            
+            <nav class="navbar navbar-light bg-dark-subtle">
+                <ol class="breadcrumb m-1">
+
+                    <li class="breadcrumb-item"><a routerLink="forms">Form</a><br></li>
+                    <li class="breadcrumb-item" *ngIf="showtem1"><a routerLink="tempform">Tel̥mplateForm</a><br></li>
+                    <li class="breadcrumb-item" *ngIf="showReact1 "><a routerLink="reactform">ReactiveForm</a></li>
+                    <li class="breadcrumb-item" *ngIf="showformP1"><a routerLink="formpractice">Form Practice</a></li>
+
+
+                </ol>
+            </nav>
+        </div>
+        <div class="col-4"><a routerLink="tempform" class="btn btn-info " (click)="showtem()">TemplateForm</a><br>
+            <a routerLink="reactform" class="btn btn-info mt-3" (click)="showReact()">ReactiveForm</a><br>
+            <a routerLink="formpractice" class="btn btn-info mt-3" (click)="showformP()">Form Practice</a></div>
+        <div class="col-8"><router-outlet></router-outlet></div>
+    </div>
+</div>

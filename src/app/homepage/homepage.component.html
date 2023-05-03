@@ -1,0 +1,102 @@
+<div>
+  <h1>{{title | uppercase}}</h1>
+  <h3>{{title | slice:0:12}}</h3>
+  <h4>{{date | date:"medium"}}</h4>
+</div>
+
+<div class="row">
+  <h3>Fahrenheit to Celsius </h3>
+</div>
+<div>
+  <p> Fahrenheit : <input type="number" [(ngModel)]="fahrenheit" />
+    Celsius : {{fahrenheit | fahrenheit:'C'}} </p>
+</div>
+<div class="row">
+  <h3>Celsius to Fahrenheit </h3>
+</div>
+<div class="row">
+  <p> celsius : <input type="number" [(ngModel)]="celcius" />
+    Fahrenheit : {{celcius | fahrenheit:'F'}} </p>
+</div>
+<form action="" [formGroup]="contact" (ngSubmit)="saveData()">
+  <div class="">
+    <div class="mb-3 ">
+      <label for="id" class="form-label">Id</label>
+      <input type="number" class="form-control w-25 m-auto" id="id" placeholder="enter id" formControlName="id">
+    </div>
+  </div>
+  <div class="">
+    <div class="mb-3 ">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control w-25 m-auto" id="name" placeholder="enter name" formControlName="name">
+    </div>
+  </div>
+  <div class="">
+    <div class="mb-3 ">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control w-25 m-auto" id="email" placeholder="enter email" formControlName="email">
+    </div>
+  </div>
+  <button class="btn btn-light w-25">Submit</button>
+</form>
+<div class="">
+  <div class="mb-3 ">
+    <label for="find" class="form-label">Search Box</label>
+    <input type="email" class="form-control w-25" id="find" placeholder="Search" [(ngModel)]="nameSearch">
+  </div>
+</div>
+<ng-container *ngIf="( course | search : nameSearch) as result">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name<button class="material-icons btn btn-sm btn-light fs-6"
+            (click)="sortName()">south</button><button class="material-icons btn btn-sm btn-light fs-6"
+            (click)="descName()">north</button></th>
+        <th scope="col">Email</th>
+        <th>Show Detail</th>
+
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let data of result">
+      <tr>
+
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td><button class="btn btn-sm btn-light" (click)="empclick(data)"><span
+              class='material-icons text-warning'>send</span></button></td>
+      </tr>
+    </tbody>
+
+
+  </table>
+  <p *ngIf="result.length === 0">No Result</p>
+
+</ng-container>
+
+
+
+<br><br><br><br>
+<form action="" [formGroup]="add">
+  <input type="text" name="data" formControlName="data">
+  <button [disabled]="add.invalid" (click)="addData()">Add</button>
+</form>
+
+<div *ngFor="let a of dt let i=index">
+  <ul class="list-group">
+    <li class="list-group-item">{{a.data}} <span><button value="{{i}}" (click)="delData($event)">Remove</button></span>
+    </li>
+  </ul>
+</div>
+
+<br><br>
+<app-adddata></app-adddata>
+<br><br><br>
+
+<app-footer></app-footer>
+<br><br><br><br><br>
+<app-purepipes></app-purepipes>
+<br><br><br><br><br>

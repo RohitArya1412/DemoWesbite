@@ -1,0 +1,25 @@
+<p>store works!</p>
+<nav class="navbar nav-tabs" >
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="./books" routerLinkActive="active" >Books</a></li>
+    <li class="breadcrumb-item" ><a routerLink="./books/book1" routerLinkActive="active" >Book1</a></li>
+    <li class="breadcrumb-item"><a routerLink="./books/book2" routerLinkActive="active">Book2</a></li>
+    <li class="breadcrumb-item"><a routerLink="./books/book3" routerLinkActive="active" >Book3</a></li>
+    
+  </ul>
+</nav>
+
+<div class="col">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" 
+        *ngFor="let item of breadcrumbList; let i = index"
+        >
+        <a  *ngIf="i!==breadcrumbList.length-1" >
+          {{ item.name }}
+        </a>
+        <span *ngIf="i===breadcrumbList.length-1">{{ item.name }}</span>
+      </li>
+    </ol>
+  </div>
+  
+  <router-outlet></router-outlet>

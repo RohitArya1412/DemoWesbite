@@ -1,0 +1,14 @@
+<p>newcomponent works!</p>
+
+<input type="text" #val>
+<button (click)="sendData(val)">add</button>
+
+
+<p>parent component
+
+    <button (click)="incre()">increment</button>
+</p>
+
+
+<h3>@output::> <strong>{{show}}</strong></h3>
+<app-newcomponent1 [inputVal]="value" (myoutput)="addData($event)"></app-newcomponent1>

@@ -1,0 +1,172 @@
+<p>comp1 works!</p>
+<h3>Single selection</h3>
+<mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+    <mat-button-toggle value="red">Red</mat-button-toggle>
+    <mat-button-toggle value="green">Green</mat-button-toggle>
+    <mat-button-toggle value="blue">Blue</mat-button-toggle>
+</mat-button-toggle-group>
+
+<h3>Multiple selection</h3>
+<mat-button-toggle-group multiple>
+    <mat-button-toggle value="flour">Flour</mat-button-toggle>
+    <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+    <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+</mat-button-toggle-group>
+<div class="card-wrapper rounded shadow d-flex mt-4">
+
+    <mat-card class="example-card w-25 ">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image style="width: 150px;"
+            src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            class="m-auto rounded" alt="Error">
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat.
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions class="m-auto">
+            <button mat-raised-button color="accent" class="me-1">LIKE</button>
+            <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-card w-25">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image style="width: 150px;"
+            src="https://images.unsplash.com/photo-1615572766543-06c21416eb05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVsbCUyMGhkJTIwd2FsbHBhcGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            class="m-auto rounded" alt="Error">
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat.
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions class="m-auto">
+            <button mat-raised-button color="accent" class="me-1">LIKE</button>
+            <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-card w-25">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image style="width: 150px;"
+            src="https://i.pinimg.com/236x/b7/79/72/b779727cdac1d2e86a844d1d27efa84e.jpg" class="m-auto rounded"
+            alt="Error">
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat.
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions class="m-auto">
+            <button mat-raised-button color="accent" class="me-1">LIKE</button>
+            <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="example-card w-25">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image style="width: 150px;"
+            src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            class="m-auto rounded" alt="Error">
+        <mat-card-content>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat.
+            </p>
+        </mat-card-content>
+
+        <mat-card-actions class="m-auto">
+            <button mat-raised-button color="accent" class="me-1">LIKE</button>
+            <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>
+<div class="mt-2">
+
+    <mat-form-field appearance="fill" class="me-2">
+        <mat-label>Message</mat-label>
+        <input matInput placeholder="Enter Name" #message>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="me-2">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Name" #action>
+    </mat-form-field>
+
+    <button mat-raised-button color="warn" (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+</div>
+<div>
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Enable Stepper' : 'Disable Stepper'}}
+    </button>
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Fill out your name</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Enter Name" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button matStepperNext mat-raised-button color="accent">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+            <form [formGroup]="secondFormGroup">
+                <mat-form-field appearance="fill" class="mt-4">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Enter Address" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious mat-raised-button color="accent" class="me-1">Back</button>
+                    <button mat-button matStepperNext mat-raised-button color="primary">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>You are now done.</p>
+            <div>
+                <button mat-button matStepperPrevious mat-raised-button color="accent" class="me-2">Back</button>
+                <button mat-button (click)="stepper.reset()" mat-raised-button color="primary">Reset</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</div>
+<div class="mt-2">
+    <mat-tab-group>
+        <mat-tab label="First"> Content 1 </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+        <mat-tab label="fourth"> Content 4 </mat-tab>
+        <mat-tab label="five"> Content 5 </mat-tab>
+        <mat-tab label="six"> Content 6 </mat-tab>
+        <mat-tab label="seven"> Content 7 </mat-tab>
+        <mat-tab label="eight"> Content 8 </mat-tab>
+        <mat-tab label="nine"> Content 9 </mat-tab>
+    </mat-tab-group>
+</div>

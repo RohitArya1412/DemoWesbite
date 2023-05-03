@@ -1,0 +1,10 @@
+<h3>Parent Component <strong>{{childData}}</strong></h3>
+
+<input type="text" class="" #val placeholder="enter value">
+<button class="btn btn-dark" (click)="saveData(val);">Add Data</button>
+<br><br><br>
+<button class="btn btn-danger" (click)="destoryComp()">Destroy Component</button>
+
+
+
+<app-onchange [onChange]="value" *ngIf="delComp" (myOutput)="getdata($event)">ngAfterContent:{{value}}</app-onchange>

@@ -1,0 +1,23 @@
+{
+    "Accounts": [
+        {
+          "name": "Bank",
+          "color": "red",
+          "children": [{ "name": "SBI" }, { "name": "RBI" }, { "name": "BOI" }]
+        },
+        {
+          "name": "Online Payment",
+          "color": "red",
+          "children": [
+            {
+              "name": "Mobile Payment",
+              "children": [{ "name": "Phone Pay" }, { "name": "Paytm" }]
+            },
+            {
+              "name": "Card Payment",
+              "children": [{ "name": "Credit Card" }, { "name": "Debit Card" }]
+            }
+          ]
+        }
+      ]
+}

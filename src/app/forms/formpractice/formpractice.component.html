@@ -1,0 +1,95 @@
+<div class="d-flex flex-column align-items-center">
+    <div class="">
+        <h1 class="">Template Dirven Form</h1>
+    </div>
+    <div class="form-control w-25 align-item-center shadow rounded ">
+        <form class="px-2 py-3 align-items-center" #simpleForm="ngForm" (submit)="saveForm(simpleForm)">
+            <div class="form-group">
+                <label for="fName">FullName</label>
+                <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter FullName" ngModel
+                    #fName="ngModel" required>
+                <small *ngIf="fName.invalid&& fName.touched"><b>*</b>Required</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" ngModel
+                    #email="ngModel" required>
+                <small *ngIf="email.invalid&& email.touched"><b>*</b>Required</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"
+                    ngModel #password="ngModel" required>
+                <small *ngIf="password.invalid&& password.touched"><b>*</b>Required</small>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="check" name="gender" value="Male" ngModel
+                    #gender="ngModel" required>
+                <label class="form-check-label" for="check">Male</label>
+                <small *ngIf="gender.invalid&& gender.touched"><b>*</b>Required</small>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="check1" name="gender" value="Female" ngModel required>
+                <label class="form-check-label" for="check1">Female</label>
+                <small *ngIf="gender.invalid&& gender.touched"><b>*</b>Required</small>
+            </div>
+            <button class="btn btn-primary" [disabled]="simpleForm.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+<br><br><br><br><br>
+            <!-- Reactive Form -->
+<div class="d-flex flex-column align-items-center">
+    <div class="">
+        <h1 class="">Reactive Form</h1>
+    </div>
+    <div class="form-control w-25 align-item-center shadow rounded ">
+        <form class="px-2 py-3 align-items-center" [formGroup]="formContact">
+            <div class="form-group">
+                <label for="fName1">FullName</label>
+                <input type="text" class="form-control" id="fName1" name="fName" placeholder="Enter FullName"
+                    formControlName="fullName">
+                <small *ngIf="formContact.get('fullName')?.invalid&& formContact.get('fullName')?.touched"
+                    class="text-danger"><b>*</b>Required</small>
+                <small *ngIf="formContact.get('fullName').invalid&&submitted" class="text-danger"><b>*</b>Invalid
+                    FullName</small>
+            </div>
+            <div class="form-group">
+                <label for="email1">Email address</label>
+                <input type="email" class="form-control" id="email1" name="email" placeholder="Enter email"
+                    formControlName="email">
+                <small *ngIf="formContact.get('email')?.invalid&&formContact.get('email')?.touched"
+                    class="text-danger"><b>*</b>Required</small>
+                <small *ngIf="formContact.get('email')?.invalid&&submitted" class="text-danger"><b>*</b>Invalid
+                    email</small>
+            </div>
+            <div class="form-group">
+                <label for="age1">Age</label>
+                <input type="number" class="form-control" id="age1" name="age" placeholder="Enter Age"
+                    formControlName="age">
+                <small *ngIf="formContact.get('age')?.invalid&&formContact.get('age')?.touched"
+                    class="text-danger"><b>*</b>Required</small>
+                <small *ngIf="formContact.get('age')?.invalid&&submitted" class="text-danger"><b>*</b>Invalid
+                    Age</small>
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" class="form-control" id="password1" name="password" placeholder="Enter Password"
+                    formControlName="password">
+                <small *ngIf="formContact.get('password')?.invalid&&formContact.get('password')?.touched"
+                    class="text-danger"><b>*</b>Minimum
+                    length 5</small>
+                <small *ngIf="formContact.get('password').invalid&&submitted" class="text-danger"><b>*</b>Invalid
+                    Password</small>
+            </div>
+            <!-- <button class="btn btn-primary mt-2"
+               [disabled]="formContact.invalid" >Submit</button> -->
+            <button class="btn btn-primary mt-2" (click)="save()">Submit</button>
+        </form>
+    </div>
+</div>
+<br><br><br><br>
+
+<button class="btn btn-outline-danger" (click)="back()">Back</button>
+<br><br><br><br><br>

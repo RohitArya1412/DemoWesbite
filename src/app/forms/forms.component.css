@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+}
+a:link {
+  /* unvisited link */
+  color: #ff0000;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:visited {
+  /* visited link */
+  color: #100f0f;
+  text-decoration: none;
+}
+a:hover {
+  /* mouse over link */
+  color: #ff9900;
+  border-bottom: none;
+}
+a:active {
+  /* active link */
+  color: #00ffff;
+  text-decoration: none;
+}
