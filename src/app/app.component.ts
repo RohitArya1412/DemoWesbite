@@ -7,13 +7,25 @@ import { ServiceService } from './service/service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private data:ServiceService){}
+  constructor(private data: ServiceService) { }
   title = 'router';
-  rxjs:boolean=false;
+  rxjs: boolean = false;
+  Rohitsperformance: any
+  rohitArya: any
   ngOnInit(): void {
-    this.data.rxjs.subscribe((res)=>{
-      this.rxjs=res;
+    this.data.rxjs.subscribe((res) => {
+      this.rxjs = res;
     })
+    setTimeout(() => {
+      this.Rohitsperformance = "According to Ajay's POV"
+      this.performance();
+    }, 3000)
+    
   }
-
+ performance(){
+if (this.Rohitsperformance == "According to Ajay's POV") {
+      this.rohitArya = "weak"
+      alert(`Rohits Performance ${this.rohitArya}`)
+    }
+}
 }
