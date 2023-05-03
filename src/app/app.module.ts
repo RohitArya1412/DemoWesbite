@@ -80,6 +80,7 @@ import { DropdownComponent } from './rxjs/dropdown/dropdown.component';
 import { Dropdown1Component } from './rxjs/dropdown1/dropdown1.component';
 import { MatTreeModule } from '@angular/material/tree';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -140,6 +141,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     ReplaysubjectComponent,
     DropdownComponent,
     Dropdown1Component,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
