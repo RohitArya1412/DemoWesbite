@@ -1,2 +1,57 @@
-<p>test works!rohit </p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+           <h2 class="mt-5">Profile Verification Component</h2>
+           <div class="card mx-auto" style="width:23rem;">
+            <div class="card-body">
+                <form [formGroup]="emailVerificationForm">
+                    <div class="mb-3 text-start">
+                      <label for="exampleInputEmail1" class="form-label text-start">Email address</label>
+                      <input type="email" formControlName="email" class="form-control form-group" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div *ngIf="formError['email'].touched && formError['email'].errors">
+                        <span class="text-danger" *ngIf="formError['email']['errors']['required']">
+                            Email is required
+                        </span>
+                      </div>
+                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+                    <div class="mb-3 text-start">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                      <div *ngIf="formError['password'].touched && formError['password'].errors">
+                        <span class="text-danger" *ngIf="formError['password']['errors']['required']">
+                            Password is required
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mb-3 form-check text-start">
+                      <input type="checkbox" formControlName="isChecked" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      <div *ngIf="formError['isChecked'].touched && formError['isChecked'].errors">
+                        <span class="text-danger" *ngIf="formError['isChecked']['errors']['required']">
+                            Agree Terms and Conditions
+                        </span>
+                      </div>
+                    </div>
+                    <div class="text-start">
+                        <button type="submit" (click)="submit()" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+                  
+                  <!-- <p>{{emailVerifyArray | json}}</p> -->
+                  <!-- <form>
+                    <div class="form-row">
+                      <div class="col-2">
+                        <input type="text" class="form-control" placeholder="First name">
+                      </div>
+                      <div class="col-2">
+                        <input type="text" class="form-control" placeholder="Last name">
+                      </div>
+                    </div>
+                  </form> -->
+            </div>
+           </div>
 
+        </div>
+    </div>
+</div>

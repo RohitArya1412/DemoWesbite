@@ -38,8 +38,9 @@ import { NewcomponentComponent } from './newcomponent/newcomponent.component';
 import { ChildGuard } from './admin/child.guard';
 import { MaterialcompComponent } from './materialcomp/materialcomp.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { TestComponent } from './test/test.component';
 
-const routes: Routes = [{ path: '', component: AdminComponent },
+const routes: Routes = [{ path: '', component: TestComponent },
 { path: "homePage", component: HomepageComponent, canActivate: [ActivateGuard] },
 { path: "showdata", component: ShowdataComponent, canActivate: [ActivateGuard] },
 { path: "about", component: AboutComponent, canActivate: [ActivateGuard] },
