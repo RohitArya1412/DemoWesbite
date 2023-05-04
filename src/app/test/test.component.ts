@@ -24,10 +24,12 @@ export class TestComponent {
   }
 
   submit(){
-  if(this.emailVerificationForm.valid){
-    this.emailVerifyArray=this.emailVerificationForm.value
-    alert("Email Verified Successfully")
-    this.emailVerificationForm.reset()
+    // this.emailVerifyArray=[]
+    if(this.emailVerificationForm.valid){
+      this.emailVerifyArray.push(this.emailVerificationForm.value)
+      console.log(this.emailVerifyArray,"sss");
+      // alert("Email Verified Successfully")
+      this.emailVerificationForm.reset()
   }
   else{
     this.emailVerificationForm.markAllAsTouched()

@@ -16,14 +16,14 @@ export class AppComponent implements OnInit {
     this.data.rxjs.subscribe((res) => {
       this.rxjs = res;
     })
-    setTimeout(() => {
-      this.Rohitsperformance = "According to Ajay's POV"
-      this.performance();
-    }, 3000)
+    // setTimeout(() => {
+    //   this.Rohitsperformance = "According to POV"
+    //   this.performance();
+    // }, 3000)
     
   }
  performance(){
-if (this.Rohitsperformance == "According to Ajay's POV") {
+if (this.Rohitsperformance == "According to POV") {
       this.rohitArya = "weak"
       alert(`Rohits Performance ${this.rohitArya}`)
     }
