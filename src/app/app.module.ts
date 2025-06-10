@@ -81,7 +81,7 @@ import { Dropdown1Component } from './rxjs/dropdown1/dropdown1.component';
 import { MatTreeModule } from '@angular/material/tree';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { TestComponent } from './test/test.component';
-
+import {NgxPrintModule} from 'ngx-print';
 
 
 
@@ -144,6 +144,7 @@ import { TestComponent } from './test/test.component';
     TestComponent,
   ],
   imports: [
+    NgxPrintModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

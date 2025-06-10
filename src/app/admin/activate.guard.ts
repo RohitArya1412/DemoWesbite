@@ -12,13 +12,14 @@ export class ActivateGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean|any {
-   if(localStorage.getItem('email')!=null){
-    return true;
-   }else{
-    alert('Please Login')
-    this.router.navigate(['login']);
-    return false
-   }
+      return true;
+  //  if(localStorage.getItem('email')!=null){
+  //   return true;
+  //  }else{
+  //   alert('Please Login')
+  //   this.router.navigate(['login']);
+  //   return false
+  //  }
 
   }
 
