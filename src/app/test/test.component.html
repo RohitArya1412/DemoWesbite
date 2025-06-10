@@ -59,8 +59,27 @@
                 </tr>
               </tbody>
             </table>
+           
            </div>
+         
 
         </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+            <label for="child" class="form-label text-success" style="cursor:pointer;">Choose File</label>
+            <input id="child"  (change)="selectFile($event)" class="d-none" type="file">
+          <div class="mt-5 border pt-4 pb-4 mx-auto" *ngIf="preview !=''" style="width:15rem;">
+            <img  class="img-fluid text-left" width="70" height="70" [src]="preview" alt="error">
+          </div>
+      </div>
+    </div>
+<div class="row">
+  <div class="col-12" id="print-id">
+    Hello There This is me Rohit arya
+
+    <button printSectionId="print-id" class="btn btn-primary mt-3" style="width:10rem;" ngxPrint>Print</button>
+  </div>
+</div>
+    
 </div>
